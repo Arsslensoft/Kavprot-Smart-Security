@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B96B8429-2882-40F8-98CA-63D64899B753}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KPCAP</RootNamespace>
+    <AssemblyName>KPCAP</AssemblyName>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=a5715cc6d5c3540b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AirPcap\AirPcapAdapterBus.cs" />
+    <Compile Include="AirPcap\AirPcapAdapterId.cs" />
+    <Compile Include="AirPcap\AirPcapBands.cs" />
+    <Compile Include="AirPcap\AirPcapChannelInfo.cs" />
+    <Compile Include="AirPcap\AirPcapChannelInfoFlags.cs" />
+    <Compile Include="AirPcap\AirPcapDecryptionState.cs" />
+    <Compile Include="AirPcap\AirPcapDevice.cs" />
+    <Compile Include="AirPcap\AirPcapDeviceCapabilities.cs" />
+    <Compile Include="AirPcap\AirPcapDeviceDescription.cs" />
+    <Compile Include="AirPcap\AirPcapDeviceList.cs" />
+    <Compile Include="AirPcap\AirPcapDeviceTimestamp.cs" />
+    <Compile Include="AirPcap\AirPcapKey.cs" />
+    <Compile Include="AirPcap\AirPcapKeyType.cs" />
+    <Compile Include="AirPcap\AirPcapLinkTypes.cs" />
+    <Compile Include="AirPcap\AirPcapMacFlags.cs" />
+    <Compile Include="AirPcap\AirPcapMediumType.cs" />
+    <Compile Include="AirPcap\AirPcapPacketHeader.cs" />
+    <Compile Include="AirPcap\AirPcapSafeNativeMethods.cs" />
+    <Compile Include="AirPcap\AirPcapStatistics.cs" />
+    <Compile Include="AirPcap\AirPcapUnmanagedStructures.cs" />
+    <Compile Include="AirPcap\AirPcapValidationType.cs" />
+    <Compile Include="AirPcap\AirPcapVersion.cs" />
+    <Compile Include="AirPcap\Win32SafeNativeMethods.cs" />
+    <Compile Include="ARP.cs" />
+    <Compile Include="CaptureDeviceList.cs" />
+    <Compile Include="CaptureEventArgs.cs" />
+    <Compile Include="CaptureStoppedEventHandler.cs" />
+    <Compile Include="CaptureStoppedEventStatus.cs" />
+    <Compile Include="DeviceMode.cs" />
+    <Compile Include="DeviceNotReadyException.cs" />
+    <Compile Include="ICaptureDevice.cs" />
+    <Compile Include="ICaptureStatistics.cs" />
+    <Compile Include="InvalidOperationDuringBackgroundCaptureException.cs" />
+    <Compile Include="LibPcap\LibPcapLiveDevice.cs" />
+    <Compile Include="LibPcap\LibPcapLiveDeviceList.cs" />
+    <Compile Include="LibPcap\LibPcapSafeNativeMethods.cs" />
+    <Compile Include="LibPcap\OfflinePcapDevice.cs" />
+    <Compile Include="LibPcap\PcapAddress.cs" />
+    <Compile Include="LibPcap\PcapDevice.cs" />
+    <Compile Include="LibPcap\PcapDeviceCaptureLoop.cs" />
+    <Compile Include="LibPcap\PcapHeader.cs" />
+    <Compile Include="LibPcap\PcapInterface.cs" />
+    <Compile Include="LibPcap\PcapStatistics.cs" />
+    <Compile Include="LibPcap\PcapUnmanagedStructures.cs" />
+    <Compile Include="LibPcap\Sockaddr.cs" />
+    <Compile Include="NotSupportedOnOfflineDeviceException.cs" />
+    <Compile Include="OfflineCaptureDevice.cs" />
+    <Compile Include="PacketArrivalEventHandler.cs" />
+    <Compile Include="Packets\ApplicationPacket.cs" />
+    <Compile Include="Packets\ARPFields.cs" />
+    <Compile Include="Packets\ARPOperation.cs" />
+    <Compile Include="Packets\ARPPacket.cs" />
+    <Compile Include="Packets\DataLinkPacket.cs" />
+    <Compile Include="Packets\EthernetFields.cs" />
+    <Compile Include="Packets\EthernetPacket.cs" />
+    <Compile Include="Packets\EthernetPacketType.cs" />
+    <Compile Include="Packets\ICMPv4Fields.cs" />
+    <Compile Include="Packets\ICMPv4Packet.cs" />
+    <Compile Include="Packets\ICMPv4TypeCodes.cs" />
+    <Compile Include="Packets\ICMPv6Fields.cs" />
+    <Compile Include="Packets\ICMPv6Packet.cs" />
+    <Compile Include="Packets\ICMPv6Types.cs" />
+    <Compile Include="Packets\Ieee80211\AckFrame.cs" />
+    <Compile Include="Packets\Ieee80211\ActionFrame.cs" />
+    <Compile Include="Packets\Ieee80211\AssociationRequestFrame.cs" />
+    <Compile Include="Packets\Ieee80211\AssociationResponseFrame.cs" />
+    <Compile Include="Packets\Ieee80211\AuthenticationFrame.cs" />
+    <Compile Include="Packets\Ieee80211\AuthenticationStatusCode.cs" />
+    <Compile Include="Packets\Ieee80211\BeaconFrame.cs" />
+    <Compile Include="Packets\Ieee80211\BlockAcknowledgmentControlField.cs" />
+    <Compile Include="Packets\Ieee80211\BlockAcknowledgmentFrame.cs" />
+    <Compile Include="Packets\Ieee80211\BlockAcknowledgmentRequestFrame.cs" />
+    <Compile Include="Packets\Ieee80211\CapabilityInformationField.cs" />
+    <Compile Include="Packets\Ieee80211\ContentionFreeEndFrame.cs" />
+    <Compile Include="Packets\Ieee80211\CtsFrame.cs" />
+    <Compile Include="Packets\Ieee80211\DataDataFrame.cs" />
+    <Compile Include="Packets\Ieee80211\DataFrame.cs" />
+    <Compile Include="Packets\Ieee80211\DeauthenticationFrame.cs" />
+    <Compile Include="Packets\Ieee80211\DisassociationFrame.cs" />
+    <Compile Include="Packets\Ieee80211\DurationField.cs" />
+    <Compile Include="Packets\Ieee80211\FrameControlField.cs" />
+    <Compile Include="Packets\Ieee80211\InformationElement.cs" />
+    <Compile Include="Packets\Ieee80211\InformationElementList.cs" />
+    <Compile Include="Packets\Ieee80211\MacFields.cs" />
+    <Compile Include="Packets\Ieee80211\MacFrame.cs" />
+    <Compile Include="Packets\Ieee80211\ManagementFrame.cs" />
+    <Compile Include="Packets\Ieee80211\NullDataFrame.cs" />
+    <Compile Include="Packets\Ieee80211\PpiFields.cs" />
+    <Compile Include="Packets\Ieee80211\PpiFieldType.cs" />
+    <Compile Include="Packets\Ieee80211\PpiHeaderFields.cs" />
+    <Compile Include="Packets\Ieee80211\PpiPacket.cs" />
+    <Compile Include="Packets\Ieee80211\ProbeRequestFrame.cs" />
+    <Compile Include="Packets\Ieee80211\ProbeResponseFrame.cs" />
+    <Compile Include="Packets\Ieee80211\QosDataFrame.cs" />
+    <Compile Include="Packets\Ieee80211\QosNullDataFrame.cs" />
+    <Compile Include="Packets\Ieee80211\RadioFields.cs" />
+    <Compile Include="Packets\Ieee80211\RadioPacket.cs" />
+    <Compile Include="Packets\Ieee80211\RadioTapChannelFlags.cs" />
+    <Compile Include="Packets\Ieee80211\RadioTapFields.cs" />
+    <Compile Include="Packets\Ieee80211\RadioTapFlags.cs" />
+    <Compile Include="Packets\Ieee80211\RadioTapType.cs" />
+    <Compile Include="Packets\Ieee80211\ReasonCodes.cs" />
+    <Compile Include="Packets\Ieee80211\ReassociationRequestFrame.cs" />
+    <Compile Include="Packets\Ieee80211\RtsFrame.cs" />
+    <Compile Include="Packets\Ieee80211\SequenceControlField.cs" />
+    <Compile Include="Packets\IGMPMessageType.cs" />
+    <Compile Include="Packets\IGMPv2Fields.cs" />
+    <Compile Include="Packets\IGMPv2Packet.cs" />
+    <Compile Include="Packets\ILogInactive.cs" />
+    <Compile Include="Packets\InternetLinkLayerPacket.cs" />
+    <Compile Include="Packets\InternetPacket.cs" />
+    <Compile Include="Packets\IpPacket.cs" />
+    <Compile Include="Packets\IpPort.cs" />
+    <Compile Include="Packets\IPProtocol.cs" />
+    <Compile Include="Packets\IPProtocolType.cs" />
+    <Compile Include="Packets\IPv4Fields.cs" />
+    <Compile Include="Packets\IPv4Packet.cs" />
+    <Compile Include="Packets\IPv6Fields.cs" />
+    <Compile Include="Packets\IPv6Packet.cs" />
+    <Compile Include="Packets\IpVersion.cs" />
+    <Compile Include="Packets\LinkLayers.cs" />
+    <Compile Include="Packets\LinqBridge-1.2.cs" />
+    <Compile Include="Packets\LinuxSLLFields.cs" />
+    <Compile Include="Packets\LinuxSLLPacket.cs" />
+    <Compile Include="Packets\LinuxSLLType.cs" />
+    <Compile Include="Packets\LLDPPacket.cs" />
+    <Compile Include="Packets\LLDP\AddressFamily.cs" />
+    <Compile Include="Packets\LLDP\CapabilityOptions.cs" />
+    <Compile Include="Packets\LLDP\ChassisID.cs" />
+    <Compile Include="Packets\LLDP\ChassisSubTypes.cs" />
+    <Compile Include="Packets\LLDP\EndOfLLDPDU.cs" />
+    <Compile Include="Packets\LLDP\InterfaceNumbering.cs" />
+    <Compile Include="Packets\LLDP\ManagementAddress.cs" />
+    <Compile Include="Packets\LLDP\NetworkAddress.cs" />
+    <Compile Include="Packets\LLDP\OrganizationSpecific.cs" />
+    <Compile Include="Packets\LLDP\PortDescription.cs" />
+    <Compile Include="Packets\LLDP\PortID.cs" />
+    <Compile Include="Packets\LLDP\PortSubTypes.cs" />
+    <Compile Include="Packets\LLDP\StringTLV.cs" />
+    <Compile Include="Packets\LLDP\SystemCapabilities.cs" />
+    <Compile Include="Packets\LLDP\SystemDescription.cs" />
+    <Compile Include="Packets\LLDP\SystemName.cs" />
+    <Compile Include="Packets\LLDP\TimeToLive.cs" />
+    <Compile Include="Packets\LLDP\TLV.cs" />
+    <Compile Include="Packets\LLDP\TLVCollection.cs" />
+    <Compile Include="Packets\LLDP\TLVTypeLength.cs" />
+    <Compile Include="Packets\LLDP\TLVTypes.cs" />
+    <Compile Include="Packets\MiscUtil\Conversion\BigEndianBitConverter.cs" />
+    <Compile Include="Packets\MiscUtil\Conversion\DoubleConverter.cs" />
+    <Compile Include="Packets\MiscUtil\Conversion\EndianBitConverter.cs" />
+    <Compile Include="Packets\MiscUtil\Conversion\Endianness.cs" />
+    <Compile Include="Packets\MiscUtil\Conversion\LittleEndianBitConverter.cs" />
+    <Compile Include="Packets\MiscUtil\IO\EndianBinaryReader.cs" />
+    <Compile Include="Packets\MiscUtil\IO\EndianBinaryWriter.cs" />
+    <Compile Include="Packets\Packet.cs" />
+    <Compile Include="Packets\PacketOrByteArraySegment.cs" />
+    <Compile Include="Packets\PayloadType.cs" />
+    <Compile Include="Packets\PosixTimeval.cs" />
+    <Compile Include="Packets\PPPFields.cs" />
+    <Compile Include="Packets\PPPoECode.cs" />
+    <Compile Include="Packets\PPPoEFields.cs" />
+    <Compile Include="Packets\PPPoEPacket.cs" />
+    <Compile Include="Packets\PPPPacket.cs" />
+    <Compile Include="Packets\PPPProtocol.cs" />
+    <Compile Include="Packets\RawPacket.cs" />
+    <Compile Include="Packets\SessionPacket.cs" />
+    <Compile Include="Packets\StringOutputType.cs" />
+    <Compile Include="Packets\TcpFields.cs" />
+    <Compile Include="Packets\TcpPacket.cs" />
+    <Compile Include="Packets\Tcp\AlternateChecksumData.cs" />
+    <Compile Include="Packets\Tcp\AlternateChecksumRequest.cs" />
+    <Compile Include="Packets\Tcp\ChecksumAlgorighmType.cs" />
+    <Compile Include="Packets\Tcp\Echo.cs" />
+    <Compile Include="Packets\Tcp\EchoReply.cs" />
+    <Compile Include="Packets\Tcp\EndOfOptions.cs" />
+    <Compile Include="Packets\Tcp\MaximumSegmentSize.cs" />
+    <Compile Include="Packets\Tcp\MD5Signature.cs" />
+    <Compile Include="Packets\Tcp\NoOperation.cs" />
+    <Compile Include="Packets\Tcp\Option.cs" />
+    <Compile Include="Packets\Tcp\OptionTypes.cs" />
+    <Compile Include="Packets\Tcp\SACK.cs" />
+    <Compile Include="Packets\Tcp\SACKPermitted.cs" />
+    <Compile Include="Packets\Tcp\TimeStamp.cs" />
+    <Compile Include="Packets\Tcp\UserTimeout.cs" />
+    <Compile Include="Packets\Tcp\WindowScaleFactor.cs" />
+    <Compile Include="Packets\TransportPacket.cs" />
+    <Compile Include="Packets\TransportProtocols.cs" />
+    <Compile Include="Packets\UdpFields.cs" />
+    <Compile Include="Packets\UdpPacket.cs" />
+    <Compile Include="Packets\Utils\AnsiEscapeSequences.cs" />
+    <Compile Include="Packets\Utils\ByteArraySegment.cs" />
+    <Compile Include="Packets\Utils\ChecksumUtils.cs" />
+    <Compile Include="Packets\Utils\Crc32.cs" />
+    <Compile Include="Packets\Utils\HexPrinter.cs" />
+    <Compile Include="Packets\Utils\RandomUtils.cs" />
+    <Compile Include="Packets\WakeOnLanPacket.cs" />
+    <Compile Include="Pcap.cs" />
+    <Compile Include="PcapException.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatisticsException.cs" />
+    <Compile Include="Version.cs" />
+    <Compile Include="WinPcapRequiredException.cs" />
+    <Compile Include="WinPcap\AuthenticationTypes.cs" />
+    <Compile Include="WinPcap\CaptureMode.cs" />
+    <Compile Include="WinPcap\OpenFlags.cs" />
+    <Compile Include="WinPcap\RemoteAuthentication.cs" />
+    <Compile Include="WinPcap\SafeNativeMethods.cs" />
+    <Compile Include="WinPcap\SendQueue.cs" />
+    <Compile Include="WinPcap\SendQueueTransmitModes.cs" />
+    <Compile Include="WinPcap\StatisticsModeEventArgs.cs" />
+    <Compile Include="WinPcap\StatisticsModeEventHandler.cs" />
+    <Compile Include="WinPcap\StatisticsModePacket.cs" />
+    <Compile Include="WinPcap\UnmanagedStructures.cs" />
+    <Compile Include="WinPcap\WinPcapDevice.cs" />
+    <Compile Include="WinPcap\WinPcapDeviceList.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="docs\Api\SharpPcap.xml" />
+    <Content Include="Packets\Libraries\log4net.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

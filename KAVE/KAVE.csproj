@@ -1,0 +1,340 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4D6FBC37-2F81-4185-BF7F-FA450C30D7FF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KAVE</RootNamespace>
+    <AssemblyName>KAVE</AssemblyName>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;UNMANAGED, COMPRESS, LZMA_STREAM, DOTNET20</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=12.5.0.2, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\DevComponents.DotNetBar2.dll</HintPath>
+    </Reference>
+    <Reference Include="Mono.Cecil, Version=0.5.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Research\Kavprot\Release\Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Research\Kavprot\Release\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Speech">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseEngine\ARCP.cs" />
+    <Compile Include="BaseEngine\Activationfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseEngine\Activationfrm.designer.cs">
+      <DependentUpon>Activationfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseEngine\Activation.cs" />
+    <Compile Include="BaseEngine\Alert.cs" />
+    <Compile Include="BaseEngine\Audio\PCWin32.cs" />
+    <Compile Include="BaseEngine\Audio\VolumeConstants.cs" />
+    <Compile Include="BaseEngine\Audio\VolumeControl.cs" />
+    <Compile Include="BaseEngine\Audio\VolumeStructs.cs" />
+    <Compile Include="BaseEngine\Compress\ArchiveEmulationStreamProxy.cs" />
+    <Compile Include="BaseEngine\Compress\ArchiveExtractCallback.cs" />
+    <Compile Include="BaseEngine\Compress\ArchiveOpenCallback.cs" />
+    <Compile Include="BaseEngine\Compress\ArchiveUpdateCallback.cs" />
+    <Compile Include="BaseEngine\Compress\Com.cs" />
+    <Compile Include="BaseEngine\Compress\Common.cs" />
+    <Compile Include="BaseEngine\Compress\EventArgs.cs" />
+    <Compile Include="BaseEngine\Compress\Exceptions.cs" />
+    <Compile Include="BaseEngine\Compress\FileSignatureChecker.cs" />
+    <Compile Include="BaseEngine\Compress\Formats.cs" />
+    <Compile Include="BaseEngine\Compress\LibraryFeature.cs" />
+    <Compile Include="BaseEngine\Compress\LibraryManager.cs" />
+    <Compile Include="BaseEngine\Compress\LzmaDecodeStream.cs" />
+    <Compile Include="BaseEngine\Compress\LzmaEncodeStream.cs" />
+    <Compile Include="BaseEngine\Compress\LzmaProgressCallback.cs" />
+    <Compile Include="BaseEngine\Compress\NativeMethods.cs" />
+    <Compile Include="BaseEngine\Compress\sdk\Common\CRC.cs" />
+    <Compile Include="BaseEngine\Compress\sdk\Common\InBuffer.cs" />
+    <Compile Include="BaseEngine\Compress\sdk\Common\OutBuffer.cs" />
+    <Compile Include="BaseEngine\Compress\sdk\Compress\LZMA\LzmaBase.cs" />
+    <Compile Include="BaseEngine\Compress\sdk\Compress\LZMA\LzmaDecoder.cs" />
+    <Compile Include="BaseEngine\Compress\sdk\Compress\LZMA\LzmaEncoder.cs" />
+    <Compile Include="BaseEngine\Compress\sdk\Compress\LZ\IMatchFinder.cs" />
+    <Compile Include="BaseEngine\Compress\sdk\Compress\LZ\LzBinTree.cs" />
+    <Compile Include="BaseEngine\Compress\sdk\Compress\LZ\LzInWindow.cs" />
+    <Compile Include="BaseEngine\Compress\sdk\Compress\LZ\LzOutWindow.cs" />
+    <Compile Include="BaseEngine\Compress\sdk\Compress\RangeCoder\RangeCoder.cs" />
+    <Compile Include="BaseEngine\Compress\sdk\Compress\RangeCoder\RangeCoderBit.cs" />
+    <Compile Include="BaseEngine\Compress\sdk\Compress\RangeCoder\RangeCoderBitTree.cs" />
+    <Compile Include="BaseEngine\Compress\sdk\ICoder.cs" />
+    <Compile Include="BaseEngine\Compress\SevenZipCompressor.cs" />
+    <Compile Include="BaseEngine\Compress\SevenZipCompressorAsynchronous.cs" />
+    <Compile Include="BaseEngine\Compress\SevenZipExtractor.cs" />
+    <Compile Include="BaseEngine\Compress\SevenZipExtractorAsynchronous.cs" />
+    <Compile Include="BaseEngine\Compress\SevenZipSfx.cs" />
+    <Compile Include="BaseEngine\Compress\StreamWrappers.cs" />
+    <Compile Include="BaseEngine\JVP\ALU\EventClasses.cs" />
+    <Compile Include="BaseEngine\JVP\ALU\ExprEval.cs" />
+    <Compile Include="BaseEngine\JVP\ALU\FunctionEval.cs" />
+    <Compile Include="BaseEngine\JVP\ALU\IExpression.cs" />
+    <Compile Include="BaseEngine\JVP\ALU\RegexObjects.cs" />
+    <Compile Include="BaseEngine\JVP\BaseProcessor.cs" />
+    <Compile Include="BaseEngine\JVP\Base\Core.cs" />
+    <Compile Include="BaseEngine\JVP\CoreManager.cs" />
+    <Compile Include="BaseEngine\JVP\Cores\Core.cs" />
+    <Compile Include="BaseEngine\JVP\Global.cs" />
+    <Compile Include="BaseEngine\JVP\PluginServices.cs" />
+    <Compile Include="BaseEngine\KavprotAccount.cs" />
+    <Compile Include="BaseEngine\Security\AntiCrash.cs" />
+    <Compile Include="BaseEngine\Security\AntiSpam.cs" />
+    <Compile Include="BaseEngine\Security\AntivirusState.cs" />
+    <Compile Include="BaseEngine\Audio\AudioWriters.cs" />
+    <Compile Include="BaseEngine\Classes\CanonicalizedUrl.cs" />
+    <Compile Include="BaseEngine\Classes\Classes.cs">
+    </Compile>
+    <Compile Include="BaseEngine\Classes\SandBoxSettings.cs" />
+    <Compile Include="BaseEngine\DNA\Disassembler.cs" />
+    <Compile Include="BaseEngine\DNA\MSIL.cs" />
+    <Compile Include="BaseEngine\Classes\Enum.cs" />
+    <Compile Include="BaseEngine\Security\FileFormat.cs" />
+    <Compile Include="BaseEngine\Security\FileSecurity.cs" />
+    <Compile Include="BaseEngine\Classes\GUI.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaseEngine\Html\crc32.cs" />
+    <Compile Include="BaseEngine\Html\EncodingFoundException.cs" />
+    <Compile Include="BaseEngine\Html\HtmlAttribute.cs" />
+    <Compile Include="BaseEngine\Html\HtmlAttributeCollection.cs" />
+    <Compile Include="BaseEngine\Html\HtmlCmdLine.cs" />
+    <Compile Include="BaseEngine\Html\HtmlCommentNode.cs" />
+    <Compile Include="BaseEngine\Html\HtmlConsoleListener.cs" />
+    <Compile Include="BaseEngine\Html\HtmlDocument.cs" />
+    <Compile Include="BaseEngine\Html\HtmlDocument.Xpath.cs" />
+    <Compile Include="BaseEngine\Html\HtmlElementFlag.cs" />
+    <Compile Include="BaseEngine\Html\HtmlEntity.cs" />
+    <Compile Include="BaseEngine\Html\HtmlNameTable.cs" />
+    <Compile Include="BaseEngine\Html\HtmlNode.cs" />
+    <Compile Include="BaseEngine\Html\HtmlNode.Xpath.cs" />
+    <Compile Include="BaseEngine\Html\HtmlNodeCollection.cs" />
+    <Compile Include="BaseEngine\Html\HtmlNodeNavigator.cs" />
+    <Compile Include="BaseEngine\Html\HtmlNodeType.cs" />
+    <Compile Include="BaseEngine\Html\HtmlParseError.cs" />
+    <Compile Include="BaseEngine\Html\HtmlParseErrorCode.cs" />
+    <Compile Include="BaseEngine\Html\HtmlTextNode.cs" />
+    <Compile Include="BaseEngine\Html\HtmlWeb.cs" />
+    <Compile Include="BaseEngine\Html\HtmlWeb.Xpath.cs" />
+    <Compile Include="BaseEngine\Html\HtmlWebException.cs" />
+    <Compile Include="BaseEngine\Html\IOLibrary.cs" />
+    <Compile Include="BaseEngine\Html\MixedCodeDocument.cs" />
+    <Compile Include="BaseEngine\Html\MixedCodeDocumentCodeFragment.cs" />
+    <Compile Include="BaseEngine\Html\MixedCodeDocumentFragment.cs" />
+    <Compile Include="BaseEngine\Html\MixedCodeDocumentFragmentList.cs" />
+    <Compile Include="BaseEngine\Html\MixedCodeDocumentFragmentType.cs" />
+    <Compile Include="BaseEngine\Html\MixedCodeDocumentTextFragment.cs" />
+    <Compile Include="BaseEngine\Html\NameValuePairList.cs" />
+    <Compile Include="BaseEngine\Html\Trace.cs" />
+    <Compile Include="BaseEngine\Html\Trace.FullFramework.cs" />
+    <Compile Include="BaseEngine\Html\Utilities.cs" />
+    <Compile Include="BaseEngine\Input\HARDWAREINPUT.cs" />
+    <Compile Include="BaseEngine\Input\INPUT.cs" />
+    <Compile Include="BaseEngine\Input\InputSimulator.cs" />
+    <Compile Include="BaseEngine\Input\InputType.cs" />
+    <Compile Include="BaseEngine\Input\KEYBDINPUT.cs" />
+    <Compile Include="BaseEngine\Input\KeyboardFlag.cs" />
+    <Compile Include="BaseEngine\Input\MouseFlag.cs" />
+    <Compile Include="BaseEngine\Input\MOUSEINPUT.cs" />
+    <Compile Include="BaseEngine\Input\MOUSEKEYBDHARDWAREINPUT.cs" />
+    <Compile Include="BaseEngine\Input\VirtualKeyCode.cs" />
+    <Compile Include="BaseEngine\Input\XButton.cs" />
+    <Compile Include="BaseEngine\IScanner.cs" />
+    <Compile Include="BaseEngine\KavProtEvents.cs" />
+    <Compile Include="BaseEngine\KavprotVoice.cs" />
+    <Compile Include="BaseEngine\Audio\Lame.cs" />
+    <Compile Include="BaseEngine\Audio\Mp3Writer.cs" />
+    <Compile Include="BaseEngine\Audio\Mp3WriterConfig.cs" />
+    <Compile Include="BaseEngine\PasswordGenerator.cs" />
+    <Compile Include="BaseEngine\Removal\Backup.cs" />
+    <Compile Include="BaseEngine\Removal\Quarantine.cs" />
+    <Compile Include="BaseEngine\Removal\ScanSolutions.cs" />
+    <Compile Include="BaseEngine\Security\Security.cs" />
+    <Compile Include="BaseEngine\Classes\Server.cs" />
+    <Compile Include="BaseEngine\SettingsManager.cs" />
+    <Compile Include="BaseEngine\Classes\SolveEquations.cs" />
+    <Compile Include="BaseEngine\Security\SystemRescue.cs" />
+    <Compile Include="BaseEngine\Classes\Virus.cs" />
+    <Compile Include="BaseEngine\SMSNeuron.cs" />
+    <Compile Include="BaseEngine\VRPS\ThreadExpert.cs" />
+    <Compile Include="BaseEngine\VRPS\VirusReportService.cs" />
+    <Compile Include="BaseEngine\VRPS\VirusTotal.cs" />
+    <Compile Include="BaseEngine\VRPS\VT.cs" />
+    <Compile Include="BaseEngine\Audio\WaveNative.cs" />
+    <Compile Include="BaseEngine\Audio\WaveStream.cs" />
+    <Compile Include="BaseEngine\Audio\WaveWriter.cs" />
+    <Compile Include="BaseEngine\Audio\Win32Functions.cs" />
+    <Compile Include="BaseEngine\Windows\HardwareControl.cs" />
+    <Compile Include="BaseEngine\Windows\WindowsControl.cs" />
+    <Compile Include="BaseEngine\Security\CloudProt.cs" />
+    <Compile Include="BaseEngine\Audio\WriterConfig.cs" />
+    <Compile Include="BaseEngine\CEA.cs" />
+    <Compile Include="Engine\Scanners\AnyScanner.cs" />
+    <Compile Include="Engine\Scanners\ARCHScanner.cs" />
+    <Compile Include="Engine\AVEngine.cs" />
+    <Compile Include="BaseEngine\Security\FileHelper.cs" />
+    <Compile Include="Engine\Scanners\NoScanner.cs" />
+    <Compile Include="Engine\Scanners\PEScanner.cs" />
+    <Compile Include="Engine\Scanner.cs" />
+    <Compile Include="Engine\Scanners\ScriptScanner.cs" />
+    <Compile Include="Engine\VDB.cs" />
+    <Compile Include="GASC.cs" />
+    <Compile Include="InfectionFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfectionFrm.designer.cs">
+      <DependentUpon>InfectionFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kavprot.cs" />
+    <Compile Include="Monitors\DriveMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Monitors\FileSystemMonitor.cs" />
+    <Compile Include="Monitors\Firewall.cs" />
+    <Compile Include="Monitors\NetworkMonitor.cs" />
+    <Compile Include="Monitors\WebMonitor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="BaseEngine\SandBox.cs" />
+    <Compile Include="ScanForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScanForm.designer.cs">
+      <DependentUpon>ScanForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseEngine\SolveEquations.cs" />
+    <Compile Include="BaseEngine\SEA.cs" />
+    <Compile Include="UpdateManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseEngine\Activationfrm.resx">
+      <DependentUpon>Activationfrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfectionFrm.resx">
+      <DependentUpon>InfectionFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScanForm.resx">
+      <DependentUpon>ScanForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KDM\KDM.csproj">
+      <Project>{2908F93E-9AF2-454C-9B66-BF634F4C016A}</Project>
+      <Name>KDM</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KPCAP\KPCAP.csproj">
+      <Project>{B96B8429-2882-40F8-98CA-63D64899B753}</Project>
+      <Name>KPCAP</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KProxy\KProxy.csproj">
+      <Project>{491088FE-D7E3-494F-8DD8-54197CB26799}</Project>
+      <Name>KProxy</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="BaseEngine\Compress\sfx\Configs.xsd" />
+    <None Include="Resources\astnet.p12" />
+    <None Include="Resources\Root.crt" />
+    <None Include="Resources\SSL.crt" />
+    <None Include="Resources\warning_black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BaseEngine\Compress\sfx\Configs.xml" />
+    <Content Include="BaseEngine\Compress\sfx\Configs.xslt" />
+    <Content Include="BaseEngine\Compress\sfx\sample.txt" />
+    <Content Include="BaseEngine\JVP\JVPASMDOC.txt" />
+    <None Include="Resources\S.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DA3ADC57-45F7-4B7F-AE96-26DACF03786D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kavprot</RootNamespace>
+    <AssemblyName>Kavprot</AssemblyName>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>shield.ico</ApplicationIcon>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>false</GenerateManifests>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar.Keyboard, Version=10.4.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=10.4.0.1, Culture=neutral, PublicKeyToken=c39c3242a43eee2b">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Speech">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="About.designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Activationfrm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Activationfrm.designer.cs">
+      <DependentUpon>Activationfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="avpC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="avpC.Designer.cs">
+      <DependentUpon>avpC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Backupfrm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Backupfrm.designer.cs">
+      <DependentUpon>Backupfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CryptoCenter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CryptoCenter.designer.cs">
+      <DependentUpon>CryptoCenter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FirewallC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FirewallC.Designer.cs">
+      <DependentUpon>FirewallC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Quarantinefrm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Quarantinefrm.designer.cs">
+      <DependentUpon>Quarantinefrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Repairfrm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Repairfrm.designer.cs">
+      <DependentUpon>Repairfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScanTypeFrm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ScanTypeFrm.designer.cs">
+      <DependentUpon>ScanTypeFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SETC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SETC.Designer.cs">
+      <DependentUpon>SETC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms.cs" />
+    <Compile Include="MainC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainC.Designer.cs">
+      <DependentUpon>MainC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Activationfrm.resx">
+      <DependentUpon>Activationfrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="avpC.resx">
+      <DependentUpon>avpC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Backupfrm.resx">
+      <DependentUpon>Backupfrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CryptoCenter.resx">
+      <DependentUpon>CryptoCenter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FirewallC.resx">
+      <DependentUpon>FirewallC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Quarantinefrm.resx">
+      <DependentUpon>Quarantinefrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Repairfrm.resx">
+      <DependentUpon>Repairfrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ScanTypeFrm.resx">
+      <DependentUpon>ScanTypeFrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SETC.resx">
+      <DependentUpon>SETC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainC.resx">
+      <DependentUpon>MainC.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Updatefrm.resx">
+      <DependentUpon>Updatefrm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utilities.resx">
+      <DependentUpon>Utilities.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WebSmartD.resx">
+      <DependentUpon>WebSmartD.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Updatefrm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Updatefrm.designer.cs">
+      <DependentUpon>Updatefrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utilities.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Utilities.designer.cs">
+      <DependentUpon>Utilities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="WebSmartD.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="WebSmartD.designer.cs">
+      <DependentUpon>WebSmartD.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitor_green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitor_red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\monitor_yellow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\allow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disallow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\zonescan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deep_scan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\quick_scan.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scanfile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\identity.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_male_white_red_brown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preferences_desktop_text_to_speech.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\anti_spam.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emblem_web.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\slock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\app.manifest" />
+    <None Include="Resources\key.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="shield.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KAVE\KAVE.csproj">
+      <Project>{4D6FBC37-2F81-4185-BF7F-FA450C30D7FF}</Project>
+      <Name>KAVE</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,42 @@
+REGISTERS
+JVPI_ASM:                                                  new instruction
+ 
+DGVI name,value,type                                       declare global variable initialized with specified type
+DEVI name,value,type                                       declare expression variable initialized with specified type
+PUSH variable or value,type                                push value on stack with specified type
+POPV variable or value                                     pop value from stack  
+CALL asm,type,method,value1,...,valueN                     call method from type in specified assembly including params
+SAYT value1,.....,valueN                                   say a text using talk neuron
+MSGB value1,.....,valueN                                   show message box
+EVAL variable to be affected,expression,type               evaluate expression and assign result to variable with specified type
+FILL variable,value,type                                   fill variable with value
+SDNG output,data                                           send data to output
+PRET variable or value, type                               return variable or value
+
+
+ARITHMETIC
+
+ADD  +
+SUB  -
+MUL  *
+DIV  /
+MOD  %
+AEQ  =
+
+LOGIC
+
+AND   logical and &&
+OR    logical or  ||
+XOR   logical xor ^
+NOT   logical not !
+NEQ   not equal  !=
+LEQ   logical equal  ==
+CGT   compare greater than >
+CGE   compare greater equal >=
+CLT   compare less than  <
+CLE   compare less Equal <=
+LSH   left shift <<
+RSH   right shift  >>
+BAND  bitwise and &
+BOR   bitwise or |
+BWC   bitwise complement ~
